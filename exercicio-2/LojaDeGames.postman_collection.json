@@ -7,6 +7,122 @@
 	},
 	"item": [
 		{
+			"name": "adicionar jogos a loja",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Forza Horizon 5\",\r\n    \"categorias\": \"Mundo aberto, ação, aventura, corrida\",\r\n    \"plataforma\": \"PC, XBOX\",\r\n    \"valor\": 300.99,\r\n    \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar jogos a loja (2)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nome\": \"Days Gone\",\r\n        \"categorias\": \"Mundo aberto, ação, aventura, sobrevivencia\",\r\n        \"plataforma\": \"PC, Playstation\",\r\n        \"valor\": 249.99,\r\n        \"status\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar jogos a loja (3)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Pokémon Scarlet e Violet\",\r\n    \"categorias\": \"RPG, ação, aventura, monstrinhos\",\r\n    \"plataforma\": \"Switch\",\r\n    \"valor\": 780.99,\r\n    \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar jogos a loja (4)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Hollow Knight\",\r\n    \"categorias\": \"RPG, ação, aventura\",\r\n    \"plataforma\": \"PC, XBOX, Playstation\",\r\n    \"valor\": 45.99,\r\n    \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "todos os jogos na loja",
 			"request": {
 				"method": "GET",
@@ -63,35 +179,6 @@
 						"Loja",
 						"jogos",
 						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "adicionar jogos a loja",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\t\"nome\": \"Days Gone\",\r\n\t\"categorias\": \"Mundo aberto, ação, aventura, sobrevivencia\",\r\n\t\"plataforma\":\"PC, Playstation\",\r\n\t\"valor\": 249.99,\r\n\t\"status\": true\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/Loja/jogos",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"Loja",
-						"jogos"
 					]
 				}
 			},
