@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "08534a12-2d05-4f6c-bab6-510aa91fea4d",
+		"name": "LojaDeGames",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27334897"
+	},
+	"item": [
+		{
+			"name": "todos os jogos na loja",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Numero de jogos na loja",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegar pelo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar jogos a loja",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Days Gone\",\r\n\t\"categorias\": \"Mundo aberto, ação, aventura, sobrevivencia\",\r\n\t\"plataforma\":\"PC, Playstation\",\r\n\t\"valor\": 249.99,\r\n\t\"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alterar um jogo e reativar jogos deletados",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"id\": 1,\r\n        \"nome\": \"Damico adventures\",\r\n        \"categorias\": \"Mundo aberto\",\r\n        \"plataforma\": \"Switch\",\r\n        \"valor\": 2.5,\r\n        \"status\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar um jogo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
