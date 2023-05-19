@@ -1,64 +1,162 @@
 {
 	"info": {
-		"_postman_id": "ef9adc2f-adcf-431d-b61d-c95e8ee41036",
-		"name": "FastFoodDokaique",
+		"_postman_id": "08534a12-2d05-4f6c-bab6-510aa91fea4d",
+		"name": "LojaDeGames",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "27334897"
 	},
 	"item": [
 		{
-			"name": "Lista de Pedidos",
+			"name": "adicionar jogos a loja",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Forza Horizon 5\",\r\n    \"categorias\": \"Mundo aberto, ação, aventura, corrida\",\r\n    \"plataforma\": \"PC, XBOX\",\r\n    \"valor\": 300.99,\r\n    \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8080/pedido",
+					"raw": "http://localhost:8080/Loja/jogos",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"pedido"
+						"Loja",
+						"jogos"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Verificar pedido especifico",
+			"name": "adicionar jogos a loja (2)",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nome\": \"Days Gone\",\r\n        \"categorias\": \"Mundo aberto, ação, aventura, sobrevivencia\",\r\n        \"plataforma\": \"PC, Playstation\",\r\n        \"valor\": 249.99,\r\n        \"status\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8080/pedido/1110",
+					"raw": "http://localhost:8080/Loja/jogos",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"pedido",
-						"1110"
+						"Loja",
+						"jogos"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Numero de Pedidos",
+			"name": "adicionar jogos a loja (3)",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Pokémon Scarlet e Violet\",\r\n    \"categorias\": \"RPG, ação, aventura, monstrinhos\",\r\n    \"plataforma\": \"Switch\",\r\n    \"valor\": 780.99,\r\n    \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8080/pedido/count",
+					"raw": "http://localhost:8080/Loja/jogos",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"pedido",
+						"Loja",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar jogos a loja (4)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\": \"Hollow Knight\",\r\n    \"categorias\": \"RPG, ação, aventura\",\r\n    \"plataforma\": \"PC, XBOX, Playstation\",\r\n    \"valor\": 45.99,\r\n    \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "todos os jogos na loja",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Numero de jogos na loja",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos",
 						"count"
 					]
 				}
@@ -66,61 +164,34 @@
 			"response": []
 		},
 		{
-			"name": "Deletar Pedidos",
+			"name": "Pegar pelo id",
 			"request": {
-				"method": "DELETE",
+				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/pedido/1000",
+					"raw": "http://localhost:8080/Loja/jogos/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"pedido",
-						"1000"
+						"Loja",
+						"jogos",
+						"1"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Adição de um novo pedido",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"numdopedido\": 1112,\r\n    \"pedido\": \"Porção de fritas\",\r\n    \"conteudo\": \"200g de batata frita e um refri\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/pedido",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"pedido"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Mudança em um pedido ja existente",
+			"name": "alterar um jogo e reativar jogos deletados",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"numdopedido\": 1100,\r\n    \"pedido\": \"Double Meat sem refri\",\r\n    \"conteudo\": \"hamburguer duplo\"\r\n}",
+					"raw": "\r\n    {\r\n        \"id\": 1,\r\n        \"nome\": \"Damico adventures\",\r\n        \"categorias\": \"Mundo aberto\",\r\n        \"plataforma\": \"Switch\",\r\n        \"valor\": 2.5,\r\n        \"status\": true\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -128,15 +199,37 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/pedido/1100",
+					"raw": "http://localhost:8080/Loja/jogos/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"pedido",
-						"1100"
+						"Loja",
+						"jogos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar um jogo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Loja/jogos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Loja",
+						"jogos",
+						"1"
 					]
 				}
 			},

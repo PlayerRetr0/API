@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import br.com.api.exercicio2.domain.DomainExercicio2;
 
-@Repository
+@Repository("jogo")
 public interface RepositoriesExercicio2 extends JpaRepository<DomainExercicio2, Integer> {
 	
 	
