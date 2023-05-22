@@ -12,10 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.api.exercicio2.domain.DomainExercicio2;
+import br.com.api.exercicio2.services.EmailService;
 import br.com.api.exercicio2.services.JogoServices;
+import jakarta.mail.MessagingException;
 
 @RestController
 @RequestMapping("/jogos")
@@ -24,6 +27,9 @@ public class JogoControllers {
 
 	    @Autowired
 	    JogoServices jogoServices;
+	    
+	    @Autowired
+	    EmailService emailService;
 
 	    @GetMapping
 	    public List<DomainExercicio2> findAll() {
@@ -46,8 +52,10 @@ public class JogoControllers {
 
 	    }
 	    @PostMapping
-	    public DomainExercicio2 cadastrarJogo(@RequestBody DomainExercicio2 jogo) {
-	        return jogoServices.cadastrarJogo(jogo);
+	    public DomainExercicio2 cadastrarJogo(@RequestParam String email, @RequestBody DomainExercicio2 jogo) throws MessagingException {
+	    	emailService.envioEmailCadastro(email, jogo);
+	    	return jogoServices.cadastrarJogo(jogo);
+	        
 	    }
 
 	    @GetMapping("/count")
@@ -55,7 +63,7 @@ public class JogoControllers {
 	        return jogoServices.count();
 	    }
 
-	    @PutMapping("/{id}")
+	    @PutMapping("/alterar/{id}")
 	    public DomainExercicio2 mudarjogo(@RequestBody DomainExercicio2 jogo, @PathVariable Integer id) {
 	    return jogoServices.mudarjogo(jogo, id);
 	    }
