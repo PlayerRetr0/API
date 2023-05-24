@@ -17,6 +17,15 @@ Deletar um jogo<br>
 Adicionar um jogo<br>
 Atualizar um jogo<br>
 
+<h3># Exercicio 3 Loja de produtos de ToH(The Owl House)<br><h3>
+API de uma loja de jogos com diversos jogos aonde você pode:<br>
+Lista de todos os Produtos da loja<br>
+Opção de ver um produto especifico<br>
+Quantidade de produtos na loja<br>
+Deletar um produto<br>
+Adicionar um produto<br>
+Atualizar um produto<br>
+
 
 
 <h1 align="center"> Autores do Projeto: </h1>  
