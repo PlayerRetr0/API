@@ -13,39 +13,51 @@ import br.com.api.exercicio3.repositories.TohRepositories;
 public class TohServices {
 
 	    @Autowired
-	    TohRepositories repositoriesExercicio2;
+	    TohRepositories tohRepositories;
 	    
 	    public List<TohDomain> findAll(){
-	        return repositoriesExercicio2.findAll();
+	        return tohRepositories.findAll();
 	    }
 
 	    public Optional <TohDomain> findById(Integer id){
-	        return repositoriesExercicio2.findById(id);
+	        return tohRepositories.findById(id);
 
 	    }
 	    
 
 	    public Long count() {
-	        return repositoriesExercicio2.count();
+	        return tohRepositories.count();
 	    }
 
 	    public void deletarProduto(Integer id) {
 
-	        Optional<TohDomain> opt = repositoriesExercicio2.findById(id);
+	        Optional<TohDomain> opt = tohRepositories.findById(id);
 	        if(opt.isPresent()) {
 	        	TohDomain jogo = opt.get();
 	        	jogo.setStatus(false);
-	        	repositoriesExercicio2.save(jogo);
+	        	tohRepositories.save(jogo);
 
 	        }
 	    }
 
 	    public TohDomain cadastrarProduto(TohDomain jogo) {
-	       return repositoriesExercicio2.save(jogo);
+	       return tohRepositories.save(jogo);
 	        }
 	    
-	    public TohDomain mudarproduto(TohDomain jogoAtualizado, Integer id) {
-	    	return repositoriesExercicio2.save(jogoAtualizado);
+	    public TohDomain mudarproduto(TohDomain produtoAtualizado, Integer id) {
+	    	TohDomain produtoAtual = tohRepositories.findById(id).get();
+			if (produtoAtual != null) {
+				produtoAtual.setNome(produtoAtualizado.getNome());
+				produtoAtual.setCategorias(produtoAtualizado.getCategorias());
+				produtoAtual.setPersonagem(produtoAtualizado.getPersonagem());
+				produtoAtual.setStatus(produtoAtualizado.isStatus());
+				produtoAtual.setValor(produtoAtualizado.getValor());
+				
+	    	return tohRepositories.save(produtoAtualizado);
+			}
+			else {
+				throw new IllegalArgumentException("Produto não encontrado");
+			}
 	    }
 
 	

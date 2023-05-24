@@ -64,7 +64,7 @@ public class TohControllers {
 	    }
 
 	    @PutMapping("/alterarprod/{id}")
-	    public TohDomain mudarjogo(@RequestBody TohDomain produto, @PathVariable Integer id) {
+	    public TohDomain mudarproduto(@RequestBody TohDomain produto, @PathVariable Integer id) {
 	    return tohServices.mudarproduto(produto, id);
 	    }
 
